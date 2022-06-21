@@ -42,7 +42,7 @@ function addTodo(todo)
 function checkTodo(e)
 {
    let item = e.target.parentNode;
-   if(item.style.textDecoration == 'none')
+   if(item.style.textDecoration == 'none') 
    item.style.textDecoration = 'line-through';
    else item.style.textDecoration = 'none';
 }
