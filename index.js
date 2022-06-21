@@ -2,7 +2,7 @@
 
 document.querySelector('form').addEventListener('submit',handleSubmitForm);
 document.querySelector('ul').addEventListener('click',handleClickCheckOrDelete);
-
+document.getElementById('clearAll').addEventListener('click',handleClickClearAll);
 
 // event handlers
 function handleSubmitForm(e)
@@ -22,6 +22,10 @@ function handleClickCheckOrDelete(e)
 
     if(e.target.name =='deleteButton')
     deleteTodo(e);
+}
+function handleClickClearAll(e)
+{
+    document.querySelector('ul').innerHTML = '';
 }
 
 //helper functions

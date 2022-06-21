@@ -8,3 +8,7 @@
 i {
     pointer-events: none;
 }
+
+.clearAll{
+    margin: 10px;
+}
