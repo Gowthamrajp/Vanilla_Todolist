@@ -1,6 +1,9 @@
 // selectors 
 
 document.querySelector('form').addEventListener('submit',handleSubmitForm);
+document.querySelector('ul').addEventListener('click',handleClickCheckOrDelete);
+
+
 // event handlers
 function handleSubmitForm(e)
 {
@@ -11,6 +14,14 @@ function handleSubmitForm(e)
         addTodo(input.value);
     }
     input.value='';
+}
+function handleClickCheckOrDelete(e)
+{
+    if(e.target.name =='checkButton')
+    checkTodo(e);
+
+    if(e.target.name =='deleteButton')
+    deleteTodo(e);
 }
 
 //helper functions
@@ -26,4 +37,16 @@ function addTodo(todo)
     `;
     li.classList.add('todo-list-item')
     ul.appendChild(li);
+}
+
+function checkTodo(e)
+{
+   let item = e.target.parentNode;
+   if(item.style.textDecoration == 'none')
+   item.style.textDecoration = 'line-through';
+   else item.style.textDecoration = 'none';
+}
+function deleteTodo(e)
+{
+    
 }

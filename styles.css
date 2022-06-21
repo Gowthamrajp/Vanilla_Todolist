@@ -5,3 +5,6 @@
 .logo{width: 100px;
     
 }
+i {
+    pointer-events: none;
+}
