@@ -48,5 +48,6 @@ function checkTodo(e)
 }
 function deleteTodo(e)
 {
-    
+   let item = e.target.parentNode;
+   item.remove(); 
 }
